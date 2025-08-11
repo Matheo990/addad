@@ -1,0 +1,52 @@
+User-agent: *
+Allow: /
+
+# Interdire l'indexation des dossiers d'administration (future phase Symfony)
+Disallow: /admin/
+Disallow: /api/
+Disallow: /src/
+Disallow: /config/
+Disallow: /var/
+Disallow: /vendor/
+
+# Interdire l'indexation des fichiers sensibles
+Disallow: /.env
+Disallow: /.git
+Disallow: /composer.json
+Disallow: /composer.lock
+
+# Permettre l'indexation des assets publics
+Allow: /assets/
+
+# Permettre l'indexation des images
+Allow: /assets/images/
+
+# Pages importantes pour les moteurs de recherche
+Allow: /sitemap.xml
+Allow: /manifest.json
+
+# Spécifications pour les bots spécialisés
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Bots de réseaux sociaux
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+# Limiter la fréquence de crawl pour préserver les performances
+Crawl-delay: 1
+
+# Sitemap XML pour faciliter l'indexation
+Sitemap: https://techshop.fr/sitemap.xml

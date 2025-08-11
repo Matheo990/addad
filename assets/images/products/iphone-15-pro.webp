@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300" height="250" viewBox="0 0 300 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="iphoneBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFFFFF"/>
+      <stop offset="100%" style="stop-color:#F8FAFC"/>
+    </linearGradient>
+    <linearGradient id="phoneGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1F2937"/>
+      <stop offset="50%" style="stop-color:#374151"/>
+      <stop offset="100%" style="stop-color:#111827"/>
+    </linearGradient>
+  </defs>
+  
+  <rect width="300" height="250" fill="url(#iphoneBg)"/>
+  
+  <!-- iPhone principal centré -->
+  <g transform="translate(115, 20)">
+    <!-- Corps du téléphone -->
+    <rect x="0" y="0" width="70" height="210" rx="18" fill="url(#phoneGradient)" stroke="#000000" stroke-width="1"/>
+    
+    <!-- Écran -->
+    <rect x="5" y="10" width="60" height="190" rx="14" fill="#000000"/>
+    <rect x="7" y="12" width="56" height="186" rx="12" fill="#3B82F6"/>
+    
+    <!-- Dynamic Island -->
+    <rect x="25" y="18" width="20" height="8" rx="4" fill="#000000"/>
+    
+    <!-- Contenu de l'écran -->
+    <!-- Barre de statut -->
+    <text x="12" y="40" font-family="SF Pro, sans-serif" font-size="6" fill="white">9:41</text>
+    <circle cx="55" cy="37" r="2" fill="white"/>
+    <rect x="50" y="35" width="3" height="4" rx="1" fill="white"/>
+    
+    <!-- Interface iOS -->
+    <rect x="12" y="50" width="46" height="20" rx="3" fill="white" opacity="0.9"/>
+    <text x="35" y="63" text-anchor="middle" font-family="SF Pro, sans-serif" font-size="8" fill="#1F2937">iPhone 15 Pro</text>
+    
+    <!-- Icônes d'applications -->
+    <rect x="12" y="80" width="12" height="12" rx="3" fill="#FF3B30"/>
+    <rect x="28" y="80" width="12" height="12" rx="3" fill="#007AFF"/>
+    <rect x="44" y="80" width="12" height="12" rx="3" fill="#34C759"/>
+    
+    <rect x="12" y="96" width="12" height="12" rx="3" fill="#FF9500"/>
+    <rect x="28" y="96" width="12" height="12" rx="3" fill="#AF52DE"/>
+    <rect x="44" y="96" width="12" height="12" rx="3" fill="#FF2D92"/>
+    
+    <!-- Boutons latéraux -->
+    <rect x="-3" y="60" width="2" height="12" rx="1" fill="#4B5563"/>
+    <rect x="-3" y="80" width="2" height="8" rx="1" fill="#4B5563"/>
+    <rect x="-3" y="92" width="2" height="8" rx="1" fill="#4B5563"/>
+    
+    <!-- Bouton d'action (nouveau) -->
+    <rect x="71" y="70" width="2" height="6" rx="1" fill="#F59E0B"/>
+    
+    <!-- Port Lightning/USB-C -->
+    <rect x="28" y="208" width="14" height="3" rx="1.5" fill="#374151"/>
+    
+    <!-- Caméras (triple) -->
+    <g transform="translate(5, 5)">
+      <rect x="0" y="0" width="25" height="25" rx="8" fill="#1F2937"/>
+      <circle cx="8" cy="8" r="6" fill="#374151"/>
+      <circle cx="17" cy="8" r="6" fill="#374151"/>
+      <circle cx="8" cy="17" r="6" fill="#374151"/>
+      
+      <!-- Lentilles -->
+      <circle cx="8" cy="8" r="4" fill="#111827"/>
+      <circle cx="17" cy="8" r="4" fill="#111827"/>
+      <circle cx="8" cy="17" r="4" fill="#111827"/>
+      
+      <!-- Flash -->
+      <circle cx="18" cy="18" r="2" fill="#F59E0B"/>
+    </g>
+  </g>
+  
+  <!-- Reflets et ombres -->
+  <ellipse cx="150" cy="240" rx="40" ry="8" fill="#000000" opacity="0.1"/>
+  
+  <!-- Éléments décoratifs -->
+  <circle cx="50" cy="50" r="2" fill="#3B82F6" opacity="0.3"/>
+  <circle cx="250" cy="200" r="3" fill="#F59E0B" opacity="0.3"/>
+  
+  <!-- Badge "Pro" -->
+  <g transform="translate(220, 30)">
+    <rect x="0" y="0" width="30" height="15" rx="7" fill="#3B82F6"/>
+    <text x="15" y="11" text-anchor="middle" font-family="Inter, sans-serif" font-size="8" font-weight="600" fill="white">PRO</text>
+  </g>
+</svg>

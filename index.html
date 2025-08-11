@@ -1,15 +1,408 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
+    <!-- Meta tags essentiels pour SEO -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- SEO Meta Tags -->
+    <title>TechShop - Boutique High-Tech | Smartphones, Ordinateurs & Accessoires</title>
+    <meta name="description" content="Découvrez TechShop, votre boutique en ligne spécialisée en high-tech. Smartphones, ordinateurs, accessoires gaming et plus encore. Livraison rapide et garantie.">
+    <meta name="keywords" content="smartphone, ordinateur, gaming, accessoires, high-tech, boutique en ligne">
+    <meta name="author" content="TechShop">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://techshop.fr/">
+    <meta property="og:title" content="TechShop - Boutique High-Tech">
+    <meta property="og:description" content="Votre boutique en ligne spécialisée en high-tech. Smartphones, ordinateurs, gaming et plus encore.">
+    <meta property="og:image" content="https://techshop.fr/assets/images/og-image.jpg">
+    <meta property="og:site_name" content="TechShop">
+    <meta property="og:locale" content="fr_FR">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://techshop.fr/">
+    <meta name="twitter:title" content="TechShop - Boutique High-Tech">
+    <meta name="twitter:description" content="Votre boutique en ligne spécialisée en high-tech.">
+    <meta name="twitter:image" content="https://techshop.fr/assets/images/twitter-card.jpg">
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    
+    <!-- PWA Meta Tags -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="TechShop">
+    <meta name="msapplication-TileColor" content="#3b82f6">
+    <meta name="msapplication-config" content="/browserconfig.xml">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "TechShop",
+        "url": "https://techshop.fr",
+        "logo": "https://techshop.fr/assets/images/logo.png",
+        "description": "Boutique en ligne spécialisée en high-tech",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+33-1-23-45-67-89",
+            "contactType": "customer service"
+        }
+    }
+    </script>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/critical.css">
+    <link rel="preload" href="/assets/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/assets/css/style.css"></noscript>
+    
+    <!-- Preconnect pour optimiser les performances -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <main>
-       
-        </main>
+    <!-- Skip link pour l'accessibilité -->
+    <a href="#main-content" class="skip-link" aria-label="Aller au contenu principal">Passer au contenu principal</a>
+    
+    <!-- Header avec navigation principale -->
+    <header class="header" role="banner">
+        <div class="container">
+            <!-- Barre d'information -->
+            <div class="header__top">
+                <div class="header__info">
+                    <span>📞 01 23 45 67 89</span>
+                    <span>✉️ contact@techshop.fr</span>
+                    <span>🚚 Livraison gratuite dès 50€</span>
+                </div>
+                <div class="header__account">
+                    <a href="/login" aria-label="Se connecter">Connexion</a>
+                    <a href="/register" aria-label="Créer un compte">Inscription</a>
+                </div>
+            </div>
+            
+            <!-- Navigation principale -->
+            <nav class="navbar" role="navigation" aria-label="Navigation principale">
+                <div class="navbar__brand">
+                    <a href="/" aria-label="Accueil TechShop">
+                        <img src="/assets/images/logo.svg" alt="TechShop Logo" width="120" height="40">
+                    </a>
+                </div>
+                
+                <!-- Menu burger pour mobile -->
+                <button class="navbar__toggle" aria-controls="navbar-menu" aria-expanded="false" aria-label="Ouvrir le menu">
+                    <span class="navbar__toggle-line"></span>
+                    <span class="navbar__toggle-line"></span>
+                    <span class="navbar__toggle-line"></span>
+                </button>
+                
+                <!-- Menu principal -->
+                <ul class="navbar__menu" id="navbar-menu" role="menubar">
+                    <li role="none"><a href="/" role="menuitem" aria-current="page">Accueil</a></li>
+                    <li role="none">
+                        <a href="/smartphones" role="menuitem" aria-haspopup="true" aria-expanded="false">
+                            Smartphones
+                        </a>
+                        <ul class="dropdown" role="menu" aria-label="Smartphones">
+                            <li role="none"><a href="/smartphones/iphone" role="menuitem">iPhone</a></li>
+                            <li role="none"><a href="/smartphones/samsung" role="menuitem">Samsung</a></li>
+                            <li role="none"><a href="/smartphones/google" role="menuitem">Google Pixel</a></li>
+                        </ul>
+                    </li>
+                    <li role="none">
+                        <a href="/ordinateurs" role="menuitem" aria-haspopup="true" aria-expanded="false">
+                            Ordinateurs
+                        </a>
+                        <ul class="dropdown" role="menu" aria-label="Ordinateurs">
+                            <li role="none"><a href="/ordinateurs/portables" role="menuitem">Portables</a></li>
+                            <li role="none"><a href="/ordinateurs/bureau" role="menuitem">Bureau</a></li>
+                            <li role="none"><a href="/ordinateurs/gaming" role="menuitem">Gaming</a></li>
+                        </ul>
+                    </li>
+                    <li role="none"><a href="/accessoires" role="menuitem">Accessoires</a></li>
+                    <li role="none"><a href="/gaming" role="menuitem">Gaming</a></li>
+                    <li role="none"><a href="/contact" role="menuitem">Contact</a></li>
+                </ul>
+                
+                <!-- Barre de recherche -->
+                <div class="navbar__search">
+                    <form class="search-form" role="search" aria-label="Rechercher des produits">
+                        <input type="search" 
+                               name="q" 
+                               placeholder="Rechercher un produit..." 
+                               aria-label="Rechercher des produits"
+                               class="search-input">
+                        <button type="submit" aria-label="Lancer la recherche" class="search-btn">
+                            🔍
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Panier -->
+                <div class="navbar__cart">
+                    <a href="/cart" class="cart-link" aria-label="Panier (0 articles)">
+                        <span class="cart-icon">🛒</span>
+                        <span class="cart-count" id="cart-count">0</span>
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
 
-        <footer></footer>
+    <!-- Contenu principal -->
+    <main id="main-content" role="main">
+        <!-- Hero Section -->
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="container">
+                <div class="hero__content">
+                    <h1 id="hero-title" class="hero__title">
+                        Les dernières innovations tech à portée de clic
+                    </h1>
+                    <p class="hero__subtitle">
+                        Découvrez notre sélection premium de smartphones, ordinateurs et accessoires gaming. 
+                        Livraison express et garantie constructeur incluse.
+                    </p>
+                    <div class="hero__actions">
+                        <a href="/products" class="btn btn--primary" aria-label="Découvrir nos produits">
+                            Découvrir nos produits
+                        </a>
+                        <a href="/offers" class="btn btn--secondary" aria-label="Voir les offres spéciales">
+                            Offres spéciales
+                        </a>
+                    </div>
+                </div>
+                <div class="hero__image">
+                    <img src="/assets/images/hero-tech.webp" 
+                         alt="Derniers smartphones et ordinateurs" 
+                         width="600" 
+                         height="400"
+                         loading="eager">
+                </div>
+            </div>
+        </section>
+
+        <!-- Section des catégories -->
+        <section class="categories" aria-labelledby="categories-title">
+            <div class="container">
+                <h2 id="categories-title" class="section-title">Nos catégories phares</h2>
+                <div class="categories__grid">
+                    <article class="category-card">
+                        <a href="/smartphones" aria-label="Découvrir les smartphones">
+                            <img src="/assets/images/category-smartphone.webp" 
+                                 alt="Smartphones dernière génération" 
+                                 width="300" 
+                                 height="200"
+                                 loading="lazy">
+                            <h3>Smartphones</h3>
+                            <p>iPhone, Samsung, Google Pixel et plus</p>
+                        </a>
+                    </article>
+                    
+                    <article class="category-card">
+                        <a href="/ordinateurs" aria-label="Découvrir les ordinateurs">
+                            <img src="/assets/images/category-laptop.webp" 
+                                 alt="Ordinateurs portables et de bureau" 
+                                 width="300" 
+                                 height="200"
+                                 loading="lazy">
+                            <h3>Ordinateurs</h3>
+                            <p>Portables, bureaux et gaming</p>
+                        </a>
+                    </article>
+                    
+                    <article class="category-card">
+                        <a href="/gaming" aria-label="Découvrir les produits gaming">
+                            <img src="/assets/images/category-gaming.webp" 
+                                 alt="Accessoires et matériel gaming" 
+                                 width="300" 
+                                 height="200"
+                                 loading="lazy">
+                            <h3>Gaming</h3>
+                            <p>Consoles, périphériques et accessoires</p>
+                        </a>
+                    </article>
+                    
+                    <article class="category-card">
+                        <a href="/accessoires" aria-label="Découvrir les accessoires">
+                            <img src="/assets/images/category-accessories.webp" 
+                                 alt="Accessoires tech divers" 
+                                 width="300" 
+                                 height="200"
+                                 loading="lazy">
+                            <h3>Accessoires</h3>
+                            <p>Écouteurs, coques, chargeurs</p>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section des produits vedettes -->
+        <section class="featured-products" aria-labelledby="featured-title">
+            <div class="container">
+                <h2 id="featured-title" class="section-title">Produits vedettes</h2>
+                <div class="products__grid" id="featured-products-grid">
+                    <!-- Les produits seront chargés dynamiquement via JavaScript -->
+                    <div class="loading" aria-label="Chargement des produits">
+                        <div class="spinner"></div>
+                        <p>Chargement des produits...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section des avantages -->
+        <section class="benefits" aria-labelledby="benefits-title">
+            <div class="container">
+                <h2 id="benefits-title" class="section-title">Pourquoi choisir TechShop ?</h2>
+                <div class="benefits__grid">
+                    <article class="benefit-card">
+                        <div class="benefit-card__icon" aria-hidden="true">🚚</div>
+                        <h3>Livraison rapide</h3>
+                        <p>Livraison gratuite dès 50€ d'achat. Express en 24h disponible.</p>
+                    </article>
+                    
+                    <article class="benefit-card">
+                        <div class="benefit-card__icon" aria-hidden="true">🛡️</div>
+                        <h3>Garantie étendue</h3>
+                        <p>Tous nos produits bénéficient d'une garantie constructeur et d'un SAV réactif.</p>
+                    </article>
+                    
+                    <article class="benefit-card">
+                        <div class="benefit-card__icon" aria-hidden="true">💳</div>
+                        <h3>Paiement sécurisé</h3>
+                        <p>Transactions SSL 256 bits. Payez par carte, PayPal ou en 3 fois sans frais.</p>
+                    </article>
+                    
+                    <article class="benefit-card">
+                        <div class="benefit-card__icon" aria-hidden="true">📞</div>
+                        <h3>Support expert</h3>
+                        <p>Équipe technique disponible 6j/7 pour vous conseiller dans vos achats.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section class="newsletter" aria-labelledby="newsletter-title">
+            <div class="container">
+                <div class="newsletter__content">
+                    <h2 id="newsletter-title">Restez connecté aux dernières nouveautés</h2>
+                    <p>Recevez nos offres exclusives et soyez les premiers informés des lancements produits.</p>
+                    <form class="newsletter__form" aria-label="Inscription newsletter">
+                        <div class="form-group">
+                            <label for="newsletter-email" class="visually-hidden">Adresse e-mail</label>
+                            <input type="email" 
+                                   id="newsletter-email" 
+                                   name="email" 
+                                   placeholder="Votre adresse e-mail" 
+                                   required 
+                                   aria-required="true">
+                            <button type="submit" class="btn btn--primary">S'abonner</button>
+                        </div>
+                        <small>Vous pouvez vous désabonner à tout moment. Voir notre <a href="/privacy">politique de confidentialité</a>.</small>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <!-- Footer principal -->
+            <div class="footer__main">
+                <div class="footer__section">
+                    <h3>TechShop</h3>
+                    <p>Votre partenaire tech de confiance depuis 2020. 
+                       Nous sélectionnons les meilleurs produits pour vous offrir une expérience d'achat exceptionnelle.</p>
+                    <div class="social-links" aria-label="Réseaux sociaux">
+                        <a href="#" aria-label="Facebook" class="social-link">📘</a>
+                        <a href="#" aria-label="Twitter" class="social-link">🐦</a>
+                        <a href="#" aria-label="Instagram" class="social-link">📷</a>
+                        <a href="#" aria-label="YouTube" class="social-link">📺</a>
+                    </div>
+                </div>
+                
+                <div class="footer__section">
+                    <h4>Produits</h4>
+                    <ul>
+                        <li><a href="/smartphones">Smartphones</a></li>
+                        <li><a href="/ordinateurs">Ordinateurs</a></li>
+                        <li><a href="/gaming">Gaming</a></li>
+                        <li><a href="/accessoires">Accessoires</a></li>
+                        <li><a href="/nouveautes">Nouveautés</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/faq">FAQ</a></li>
+                        <li><a href="/shipping">Livraison</a></li>
+                        <li><a href="/returns">Retours</a></li>
+                        <li><a href="/warranty">Garantie</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__section">
+                    <h4>Entreprise</h4>
+                    <ul>
+                        <li><a href="/about">À propos</a></li>
+                        <li><a href="/careers">Carrières</a></li>
+                        <li><a href="/press">Presse</a></li>
+                        <li><a href="/partners">Partenaires</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Footer bottom -->
+            <div class="footer__bottom">
+                <div class="footer__legal">
+                    <p>&copy; 2024 TechShop. Tous droits réservés.</p>
+                    <ul class="legal-links">
+                        <li><a href="/privacy">Politique de confidentialité</a></li>
+                        <li><a href="/terms">Conditions d'utilisation</a></li>
+                        <li><a href="/cookies">Cookies</a></li>
+                        <li><a href="/legal">Mentions légales</a></li>
+                    </ul>
+                </div>
+                <div class="footer__payment">
+                    <p>Moyens de paiement acceptés :</p>
+                    <div class="payment-icons" aria-label="Moyens de paiement">
+                        <span>💳</span>
+                        <span>🅿️</span>
+                        <span>💰</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/assets/js/critical.js"></script>
+    <script src="/assets/js/app.js" defer></script>
+    
+    <!-- Analytics (Google Analytics 4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
 </body>
 </html>

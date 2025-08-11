@@ -1,0 +1,182 @@
+{
+  "name": "TechShop - Boutique High-Tech",
+  "short_name": "TechShop",
+  "description": "Votre boutique en ligne spécialisée en high-tech. Smartphones, ordinateurs, gaming et accessoires.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#3b82f6",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "fr",
+  "dir": "ltr",
+  
+  "icons": [
+    {
+      "src": "/assets/images/favicon/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/images/favicon/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/images/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  
+  "screenshots": [
+    {
+      "src": "/assets/images/screenshots/desktop-home.webp",
+      "sizes": "1280x720",
+      "type": "image/webp",
+      "form_factor": "wide",
+      "label": "Page d'accueil TechShop sur desktop"
+    },
+    {
+      "src": "/assets/images/screenshots/mobile-home.webp",
+      "sizes": "390x844",
+      "type": "image/webp",
+      "form_factor": "narrow",
+      "label": "Page d'accueil TechShop sur mobile"
+    },
+    {
+      "src": "/assets/images/screenshots/mobile-products.webp",
+      "sizes": "390x844", 
+      "type": "image/webp",
+      "form_factor": "narrow",
+      "label": "Catalogue produits sur mobile"
+    }
+  ],
+  
+  "categories": [
+    "shopping",
+    "lifestyle",
+    "business"
+  ],
+  
+  "shortcuts": [
+    {
+      "name": "Smartphones",
+      "short_name": "Smartphones",
+      "description": "Découvrir les derniers smartphones",
+      "url": "/smartphones",
+      "icons": [
+        {
+          "src": "/assets/images/shortcuts/smartphone-96x96.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Ordinateurs",
+      "short_name": "PC",
+      "description": "Ordinateurs portables et de bureau",
+      "url": "/ordinateurs",
+      "icons": [
+        {
+          "src": "/assets/images/shortcuts/laptop-96x96.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Gaming",
+      "short_name": "Gaming",
+      "description": "Matériel et accessoires gaming",
+      "url": "/gaming",
+      "icons": [
+        {
+          "src": "/assets/images/shortcuts/gaming-96x96.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Mon Panier",
+      "short_name": "Panier",
+      "description": "Voir mon panier d'achat",
+      "url": "/cart",
+      "icons": [
+        {
+          "src": "/assets/images/shortcuts/cart-96x96.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  
+  "related_applications": [
+    {
+      "platform": "play",
+      "url": "https://play.google.com/store/apps/details?id=com.techshop.app",
+      "id": "com.techshop.app"
+    },
+    {
+      "platform": "itunes",
+      "url": "https://apps.apple.com/app/techshop/id123456789",
+      "id": "123456789"
+    }
+  ],
+  
+  "prefer_related_applications": false,
+  
+  "protocol_handlers": [
+    {
+      "protocol": "web+techshop",
+      "url": "/share?url=%s"
+    }
+  ],
+  
+  "share_target": {
+    "action": "/share",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url",
+      "files": [
+        {
+          "name": "image",
+          "accept": ["image/*"]
+        }
+      ]
+    }
+  },
+  
+  "file_handlers": [
+    {
+      "action": "/open-product",
+      "accept": {
+        "application/techshop+json": [".tshop"]
+      }
+    }
+  ],
+  
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+  
+  "launch_handler": {
+    "client_mode": "focus-existing"
+  },
+  
+  "display_override": [
+    "window-controls-overlay",
+    "minimal-ui",
+    "standalone",
+    "browser"
+  ],
+  
+  "handle_links": "preferred",
+  
+  "iarc_rating_id": "e84b072d-71b3-4d3e-86ae-31a8ce4e53b7"
+}
